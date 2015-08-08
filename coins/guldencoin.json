@@ -1,0 +1,7 @@
+{
+    "name": "Guldencoin",
+    "symbol": "NLG",
+    "algorithm": "scrypt",
+    "peerMagic": "fcfef7e0",
+    "peerMagicTestnet": "fcfef700"
+}

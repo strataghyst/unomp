@@ -1,0 +1,37 @@
+<div class="row">
+<div class="col-md-12">
+{{ for(var pool in it.stats.pools) { }}
+        <div class="box box-solid box-primary">
+            <div class="box-header">
+                <h3 class="box-title"><i class="fa fa-cog"></i> {{=it.stats.pools[pool].name}} Stats</h3>
+            </div>
+            <div class="box-body no-padding">
+                <table class="table table-striped">
+                                                        <thead>
+                                                                <tr>
+                						    <th>Address</th>
+						                    <th>Shares</th>
+        						            <th>Invalid shares</th>
+                						    <th>Efficiency</th>
+               							    <th>Hashrate</th>
+                                                                </tr>
+                                                        </thead>
+                                                        <tbody>
+								{{ for(var worker in it.stats.pools[pool].workers) { }}
+    							               {{var workerstat = it.stats.pools[pool].workers[worker];}}
+                    							<tr>
+							                        <td>{{=worker}}</td>
+                        							<td>{{=Math.floor(workerstat.shares)}}</td>
+                        							<td>{{=Math.floor(workerstat.invalidshares)}}</td>
+                        							<td>{{? workerstat.shares > 0}} {{=Math.floor(10000 * workerstat.shares / (workerstat.shares + workerstat.invalidshares)) / 100}}% {{??}} 0% {{?}}</td>
+                        							<td>{{=workerstat.hashrateString}}</td>
+                    							</tr>
+                						{{ } }}
+                                                        </tbody>
+                                                </table>
+                                        </div>
+                                </div>
+	{{ } }}
+
+                        </div>
+                </div>

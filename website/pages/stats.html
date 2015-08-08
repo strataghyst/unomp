@@ -1,0 +1,105 @@
+<div class="row">
+       <div class="col-md-12">
+        <div class="box box-solid box-primary">
+            <div class="box-header">
+                <h3 class="box-title"><i class="fa fa-cog"></i> Block Overview</h3>
+            </div>
+            <div class="box-body no-padding">
+                <table class="table table-striped">
+                                                        <thead>
+                                                                <tr>
+                                                                        <th>Pool</th>
+                                                                        <th>Valid Shares</th>
+                                                                        <th>Invalid Shares</th>
+                                                                        <th>Total Blocks</th>
+                                                                </tr>
+                                                        </thead>
+                                                        <tbody>
+                					{{ for(var pool in it.stats.pools) { }}
+								<tr>
+									<td>{{=pool}}</td>
+									<td>{{=it.stats.pools[pool].poolStats.validShares}}</td>
+									<td>{{=it.stats.pools[pool].poolStats.invalidShares}}</td>
+									<td>{{=it.stats.pools[pool].poolStats.validBlocks}}</td>
+								</tr>
+					                {{ } }}
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		<div class="col-md-12">
+        <div class="box box-solid box-danger">
+            <div class="box-header">
+                <h3 class="box-title"><i class="fa fa-cog"></i> Blocks</h3>
+            </div>
+            <div class="box-body no-padding">
+                <table class="table table-striped">
+                                                        <thead>
+                                                                <tr>
+                                                                        <th>Pool</th>
+                                                                        <th>Pending Blocks</th>
+                                                                        <th>Confirmed Blocks</th>
+                                                                        <th>Orphaned Blocks</th>
+                                                                </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        {{ for(var pool in it.stats.pools) { }}
+                                                                <tr>
+                                                                        <td>{{=pool}}</td>
+                                                                        <td>{{=it.stats.pools[pool].blocks.pending}}</td>
+                                                                        <td>{{=it.stats.pools[pool].blocks.confirmed}}</td>
+                                                                        <td>{{=it.stats.pools[pool].blocks.orphaned}}</td>
+                                                                </tr>
+                                                        {{ } }}
+                                                        </tbody>
+                                                </table>
+                                        </div>
+                                </div>
+                        </div>
+		<div class="col-md-12">
+        <div class="box box-solid box-success">
+            <div class="box-header">
+                <h3 class="box-title"><i class="fa fa-cog"></i> Pool Stats</h3>
+            </div>
+            <div class="box-body no-padding">
+                <table class="table table-striped">
+                                                        <thead>
+                                                                <tr>
+									<th>Pool</th>
+							                <th>Algo</th>
+        							        <th>Workers</th>
+                							<th>Valid Shares</th>
+        							        <th>Invalid Shares</th>
+        							        <th>Total Blocks</th>
+        							        <th>Pending</th>
+       								        <th>Confirmed</th>
+                							<th>Orphaned</th>
+             								<th>Hashrate</th>
+                                                                </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        {{ for(var pool in it.stats.pools) { }}
+                                                                <tr>
+									<td>{{=it.stats.pools[pool].name}}</td>
+							                <td>{{=it.stats.pools[pool].algorithm}}</td>
+                							<td>{{=Object.keys(it.stats.pools[pool].workers).length}}</td>
+                							<td>{{=it.stats.pools[pool].poolStats.validShares}}</td>
+                							<td>{{=it.stats.pools[pool].poolStats.invalidShares}}</td>
+                							<td>{{=it.stats.pools[pool].poolStats.validBlocks}}</td>
+                							<td>{{=it.stats.pools[pool].blocks.pending}}</td>
+                							<td>{{=it.stats.pools[pool].blocks.confirmed}}</td>
+                							<td>{{=it.stats.pools[pool].blocks.orphaned}}</td>
+               								<td>{{=it.stats.pools[pool].hashrateString}}</td>
+                                                                </tr>
+                                                        {{ } }}
+                                                        </tbody>
+                                                </table>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+
+<script>
+    document.querySelector('main').appendChild(document.createElement('script')).src = '/static/stats.js';
+</script>
