@@ -1,0 +1,67 @@
+{
+    "name": "unified-node-open-mining-portal",
+    "version": "0.0.5",
+    "description": "An extremely efficient, highly scalable, all-in-one, easy to setup cryptocurrency mining pool",
+    "keywords": [
+        "stratum",
+        "mining",
+        "pool",
+        "server",
+        "poolserver",
+        "bitcoin",
+        "litecoin",
+        "scrypt",
+	"merged",
+	"sigwo"
+    ],
+    "homepage": "https://github.com/UNOMP/unified-node-open-mining-portal",
+    "bugs": {
+        "url": "https://github.com/UNOMP/unified-node-open-mining-portal/issues"
+    },
+    "license": "GPL-2.0",
+    "author": "Steven Grove",
+    "contributors": [
+        "vekexasia",
+        "TheSeven",
+        "ahmed",
+	"zone117x",
+	"elitemobb",
+	"altnuts",
+	"infernoman"
+    ],
+    "main": "init.js",
+    "bin": {
+        "block-notify": "./scripts/blockNotify.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/UNOMP/unified-node-open-mining-portal.git"
+    },
+    "dependencies": {
+        "merged-pooler": "git://github.com/sigwo/node-merged-pool",
+        "dateformat": "*",
+	"log4js": "*",
+	"bitcoin": "*",
+        "node-json-minify": "*",
+	"node.bittrex.api": "*",
+	"poloniex.js": "*",
+	"cryptsy": "*",
+        "redis": "*",
+        "mysql": "*",
+        "async": "*",
+        "express": "*",
+        "body-parser": "*",
+        "compression": "*",
+        "dot": "*",
+        "newrelic": "*",
+        "colors": "*",
+        "node-watch": "*",
+        "request": "*",
+        "nonce": "*",
+        "bignum": "*",
+        "extend": "*"
+    },
+    "engines": {
+        "node": ">=0.10"
+    }
+}
