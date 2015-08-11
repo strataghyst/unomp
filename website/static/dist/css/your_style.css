@@ -621,6 +621,7 @@ form#contact-form input:focus, form#contact-form select:focus, form#contact-form
 	margin-left: 0;
 	padding-left: 0;
 	margin-top: 10px;
+	
 }
 
 .company-social {
@@ -656,6 +657,7 @@ form#contact-form input:focus, form#contact-form select:focus, form#contact-form
 }
 .company-social .social-twitter a {
 	background: #62c6f8;
+	margin-right: 8px;
 }
 .company-social .social-dribble a {
 	background: #d74980;

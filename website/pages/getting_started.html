@@ -1,6 +1,4 @@
-<div class="row">
-	<div class="col-md-12">
-        <div class="box box-solid box-warning">
+ <div class="box box-solid box-warning">
             <div class="box-header">
                 <h3 class="box-title"><i class="fa fa-cog"></i> Getting Started</h3>
             </div>
@@ -36,3 +34,58 @@
 				</div>
 			</div>
 		</div>
+
+<div class="row">
+	<div class="col-md-12">
+	<center>
+	<p>1. <strong>Download a miner.</strong></p>
+     
+    <em>If you are using AMD hardware we highly recommend using <a href="https://github.com/sgminer-dev/sgminer">SGminer</a>.<br>	 
+    <em>Intel/ATI/AMD CGMiner (3.7.2) Windows:</em> <a href="https://mega.co.nz/#!iQhlGIxa!mzKOfLY6TpOfvPvWE6JFlWdRgHEoshzm99f1hd3ZdRw" target="_blank">Download here</a><br>	
+	<em>Intel/ATI/AMD CGMiner (3.7.2) Linux:</em> <a href="http://ck.kolivas.org/apps/cgminer/3.7/cgminer-3.7.0.tar.bz2" target="_blank">Download Here</a><br>	
+	<em>NVIDIA Cudaminer:</em><a href="https://bitcointalk.org/index.php?topic=167229.0" target="_blank"> Download here</a><br>
+    <em>Intel/ATI/AMD BFGMiner Linux/Windows:</em> <a href="http://bfgminer.org" target="_blank">Download here</a><br>
+    <em>Fabulous Panda Miner Mac OS X:</em> <a href="http://fabulouspanda.co.uk/macminer/" target="_blank">Download here</a><br>
+    <em>Minerd CPU Miner Mac/Linux/Windows:</em><a href="https://bitcointalk.org/index.php?topic=55038.msg654850#msg654850" target="_blank"> Download here</a>.<br>
+      
+	<br>
+	<p>2. <strong>Create a wallet address to receive payments.</strong></p>
+	<a href="https://guldencoin.com/nl/download" target="_blank"><h4>Download a Guldencoin wallet</h4></a>
+	
+	<br>			
+    <p>Generate a new address and input it on your account page to receive payments.</p>
+	<br>
+	<p>3. <strong>Configure your miner.</strong></p>
+	  
+	  Scrypt
+      <pre>stratum+tcp://deguldenmijn.eu:3009 -u <em>"Your_Wallet_Address"</em> -p <em>Anything</em></pre>
+      <br>
+      <p>port difficulty settings</p>
+      
+      <ul>
+	 <li><em>3001: 8 VarDiff</em></li>
+	 <li><em>3002: 128 VarDiff</em></li>
+	 <li><em>3003: 256</em></li>
+	 <li><em>3004: 512</em></li>
+	 <li><em>3005: 1024</em></li>
+	 <li><em>3006: 2048</em></li>
+	 <li><em>3007: 4096</em></li>
+	 <li><em>3008: 8192</em></li>
+	 <li><em>3009: 16384</em></li>
+	 </ul>
+	 
+	  <p> Save the configuration file by going to "File &gt; Save as" and save the file as "RunMe.bat" in the same folder containing your miners application files. You are now ready to mine, double click on "RunMe.bat" to start mining.</p>
+           
+      <p>4. <strong>Advanced CGMiner settings / FAQ</strong></p>
+      
+        <a href="https://raw.github.com/ckolivas/cgminer/v3.7.2/SCRYPT-README" target="_blank">Scrypt readme</a>
+        Don't set <b>intensity</b> too high, I=11 is standard and safest. Higher intensity takes more GPU RAM. Check for <b>hardware errors</b> in CGMiner (HW). HW=0 is good, otherwise lower intensity.
+        Set shaders according to the readme (or look at your graphic cards specifications). CGMiner uses this value at first run to calculate <b>thread-concurrency</b>. Easiest way to get this optimized is to use same settings as others have used here: <a href="http://litecoin.info/Mining_Hardware_Comparison" target="_blank">here</a>.
+        There's also an interesting project which gives you a GUI for CGMiner. Windows only it seems.
+        Here's a great <a href="https://docs.google.com/document/d/1Gw7YPYgMgNNU42skibULbJJUx_suP_CpjSEdSi8_z9U/preview?sle=true" target="_blank">guide</a> how to get up and running with Xubuntu.
+      
+</em></div><em>
+ 
+    </em></div>
+	</center>	
+       

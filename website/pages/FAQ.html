@@ -1,0 +1,37 @@
+<center>
+<table id="help" width="50%">
+<thead><tr><th align="center">
+<h3>Frequently Asked Questions</h3></th>
+</tr></thead><tbody>
+<tr><td><b><u>Q: What fees does this site charge?</u></b></td></tr>
+<tr><td>A: This site charges a 1% fee on all mining proceeds.</td>
+
+<tr><td><b><u>Q: The pool isn't showing my correct hashrate!</u></b></td></tr>
+<tr><td>A: The hashrate your miner displays is its own internal hashrate for calculating difficulty 1 shares, and thus is fairly meaningless to the pool.  The pool displays an average hashrate calculated based on your valid, accepted shares per minute.  There are several reasons your hashrate could be different from your miner's.  The most common reason is that you are trying to mine scrypt but forgot to include the --scrypt flag in your cgminer command line.<br><br>The only hashrate that matters is your accepted hashrate from the shares you submit.  If you're connected and submitting shares, the pool's calculations are normally correct within 10%, so if you think your hashrate seems low, and there do not seem to be any other obvious issues with the pool/website, <b>the problem is most likely your miner</b>.  If you are mining scrypt, please follow <a href="https://bitcointalk.org/index.php?topic=117221.0" target="_blank">this guide</a> before submitting support requests via email or in the support threads.</td></tr>
+<tr><td><b><u>Q: My miner says I'm submitting shares but my balance isn't changing!</u></b></td></tr>
+<tr><td>A: This is not a PPS (Pay-Per-Share) pool.  Pay-per-Share pools generally charge a much higher fee, in the neighborhood of 3-5%.  This pool uses a modified Proportional scoring system.  Your balance will not update until a block is confirmed.</td></tr>
+<tr><td><b><u>Q: What are 'Round Shares'?</u></b></td></tr>
+<tr><td>A: Round Shares means shares in the current "Round".  The current round is defined as the time period that contains the shares that would be counted if a block was found as of the last time estimates were calculated.  Normally this is the time period since the last block was found.</td></tr>
+<tr><td><b><u>Q: What is share difficulty, and what should I set mine to?</u></b></td></tr>
+<tr><td><p>Each hash calculated by your miner results in a random number.  If this random number is below a certain threshold (known as the target), then it can be submitted to the pool and credited.  Shares above the target are not submitted.  Target and difficulty are inversely proportional to each other (the higher the difficulty, the lower the target).  This is why you may sometimes see warnings in your miner about a share being "Above Target".</p><p>Over long time periods, share difficulty does not matter, and the default of 64 should work fine for anyone.  If you have a very high speed miner, please increase your share difficulty to an appropriate setting.  You can connect as many miners as you like using a single worker.  We suggest the following difficulty setting per worker based on the worker's <i>aggregate hashrate</i>:<br><br>
+Scrypt coins:
+</p>
+<ul>
+<li>1+: 16+</li>
+<li>1000+: 128+</li>
+<li>5000+: 1024+</li>
+<li>10000+: 1024+</li>
+<li>25000+: 2048+</li>
+<li>50000+: 4096+</li>
+<li>100000+: 8192+</li>
+<li>250000+: 16k+</li>
+</ul>
+
+
+If you need an even higher share difficulty, please give me a tweet.
+<b></b></td></tr>
+
+
+</tbody>
+</table>
+</center>

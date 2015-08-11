@@ -5,7 +5,7 @@
     <title>{{=it.portalConfig.website.siteTitle}}</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-	<meta name="author" content="Elitemobb">
+	<meta name="author" content="Strataghyst">
     <!-- Bootstrap 3.3.4 -->
     <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- FontAwesome 4.3.0 -->
@@ -13,8 +13,8 @@
     <!-- Ionicons 2.0.0 -->
     <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
 	<!-- FAVICONS -->
-	<link rel="shortcut icon" href="/static/img/favicon/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="/static/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/static/dist/img/favicon.png" type="image/x-icon">
+	<link rel="icon" href="/static/img/dist/favicon.png" type="image/x-icon">
     <!-- Theme style -->
     <link href="/static/dist/css/AdminLTE.css" rel="stylesheet" type="text/css" />
     <!-- AdminLTE Skins. Choose a skin from the css/skins 
@@ -63,10 +63,13 @@
 									<a href="/getting_started"><span class="gn-icon glyphicon glyphicon-play"></span>Getting started</a>
 								</li>
 								<li>
-									<a href="/stats"><span class="gn-icon glyphicon glyphicon-stats"></span> Stats</a>
+									<a href="/stats"><span class="gn-icon glyphicon glyphicon-stats"></span>Stats</a>
 								</li>
 								<li>
 									<a href="/workers"><span class="gn-icon glyphicon glyphicon-cog"></span>Workers</a>
+								</li>
+								<li>
+									<a href="/miner"><span class="gn-icon glyphicon glyphicon-list-alt"></span>Miner stats</a>
 								</li>
 								<li>
 									<a href="/api"><span class="gn-icon glyphicon glyphicon-transfer"></span>API</a>
@@ -84,18 +87,14 @@
 					<a href="/"><img src="static/dist/img/logo/deguldenmijn500.png" alt="logo" style="width: 135px; margin-top: -4px;" ></a>
 				</li>
 				<!--- END LOGO --->
-				
+
 				<li>
 					<ul class="company-social">
-						<li class="social-facebook">
-							<a href="javascript:void(0);" target="_blank"><i class="fa fa-facebook"></i></a>
-						</li>
 						<li class="social-twitter">
-							<a href="javascript:void(0);" target="_blank"><i class="fa fa-twitter"></i></a>
+							<a href="https://twitter.com/strataghyst" target="_blank"><i class="fa fa-twitter"></i></a>
 						</li>
-						<li class="social-google">
-							<a href="javascript:void(0);" target="_blank"><i class="fa fa-google-plus"></i></a>
-						</li>
+
+						
 					</ul>
 				</li>
 			</ul>
@@ -105,12 +104,14 @@
       <!-- Content Wrapper. Contains page content -->
 		<!-- MAIN PANEL -->
 		<div id="main" role="main" style="padding-top: 80px">
+			
 			<div class="container">
 				<div class="row" >
 		
 					<div id="ribbon">
 						<ol class="breadcrumb">
-							<li>DEGULDENMIJN BETA</li><li>{{=it.selected}}</li>
+							<li>DEGULDENMIJN</li><li>{{=it.selected}}</li>
+							<li class="pull-right"><span id="stats_updated" class="text-success">Stats Updated <i class="fa fa-bolt"></i></span></li>
 						</ol>
 					</div>
 						<!-- END RIBBON -->
@@ -124,6 +125,7 @@
 				</div>
 			</div>
 		</div>
+		
 		<!-- END MAIN PANEL -->
 				<!-- #FOOTER -->
 <div class="container text-center" style="padding: 0px">
@@ -145,6 +147,7 @@
       <div class="col-md-3 col-sm-6">
         <ul class="nav nav-pills nav-stacked">
 			<p>Community Links</p>
+			  <li><a href="https://www.guldencoin.zone/">Guldencoin.zone</a></li>
 			  <li><a href="https://forum.guldencoin.com/">Forum</a></li>
 			  <li><a href="http://www.guldencoinlinks.nl/">Guldencoinlinks</a></li>
 			  <li><a href="http://www.guldenfunding.nl/">Guldenfunding</a></li>
@@ -170,9 +173,11 @@
 			<p>Mining pools</p>
           <li><a href="http://pool.guldenhash.com:8000/getting_started#">Guldenhash</a></li>
 		  <li><a href="http://deguldenmijn.eu/getting_started#">DEGULDENMIJN</a></li>
-		  <li><a href="https://nlg.hardcoreminers.com/">Hardcoreminers</a></li>
+		  <li><a href="http://nlg.hardcoreminers.com/">Hardcoreminers</a></li>
 		  <li><a href="http://guldenpool.nl:27100/static/">Guldenpool</a></li>
 		  <li><a href="http://neogulden.com:8000/">Neogulden</a></li>
+		  <li><a href="http://altnuts.com/">Altnuts</a></li>
+		  <li><a href="http://infernopool.com/">Infernopool</a></li>
         </ul>
       </div>  
     </div>
@@ -181,9 +186,9 @@
     <div class="row">
         <div class="col-lg-12">
             <ul class="nav nav-pills nav-justified">
-                <li><a href="#">FAQ</a></li>
+                <li><a href="/FAQ">FAQ</a></li>
                 <li><a href="/">DEGULDENMIJN © 2015.</a></li>
-                <li><a href="#">About us</a></li>
+                <li><a href="/about">About us</a></li>
             </ul>
             <strong>Powered by: <a href="http://unomp.org">uNOMP - Crypto Mining Technology</a></strong>
         </div>
