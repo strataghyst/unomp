@@ -244,17 +244,27 @@ hr {
 }
 
 .gn-menu-wrapper {
-    position: fixed;
-    top: 60px;
-    bottom: 0px;
-    left: 0px;
-    overflow: hidden;
-    width: 60px;
-    border-top: 1px solid #C6D0DA;
-	background-repeat: repeat-x;
-    min-height: 100%;
-    transform: translateX(-60px);
-    transition: transform 0.3s ease 0s, width 0.3s ease 0s;
+z-index: 10;
+position: fixed;
+top: 60px;
+bottom: 0;
+left: 0;
+overflow: hidden;
+width: 60px;
+border-top: 1px solid #c6d0da;
+background: transparent;
+-webkit-transform: translate3d(-60px, 0px, 0px);
+-moz-transform: translate3d(-60px, 0px, 0px);
+transform: translate3d(-60px, 0px, 0px);
+
+/*** Changue translateX(-60px) for translate3d(-60px, 0px, 0px) */
+
+/* -webkit-transform: translateX(-60px);
+-moz-transform: translateX(-60px);
+transform: translateX(-60px); */
+-webkit-transition: -webkit-transform 0.3s, width 0.3s;
+-moz-transition: -moz-transform 0.3s, width 0.3s;
+transition: transform 0.3s, width 0.3s;
 }
 
 .gn-scroller {
@@ -466,6 +476,7 @@ input.gn-search:focus {
 		transform: translateX(0px);
 		width: 100%;
 	}
+	
 
 	.gn-menu-wrapper.gn-open-all .gn-scroller {
 		width: 130%
@@ -797,3 +808,5 @@ b, strong {
     font-weight: 700;
     padding:10px;
 }
+
+
